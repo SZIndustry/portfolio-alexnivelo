@@ -203,11 +203,11 @@
 
         .project-item img {
             width: 100%;
-            aspect-ratio: 9 / 16; /* Mantiene el formato vertical de TikTok/Reels */
+            aspect-ratio: 9 / 16;
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 20px;
-            background-color: #222; /* Placeholder gris mientras carga la imagen */
+            background-color: #222;
         }
 
         .project-item h3 {
@@ -227,12 +227,52 @@
             margin-top: 40px;
         }
 
+        /* =========================================
+           6. FOOTER Y CONTACTO
+           ========================================= */
+        .footer-contact {
+            text-align: center;
+            padding: 60px 20px 80px;
+            background-color: #000;
+            border-top: 1px solid #222;
+        }
+
+        .footer-contact h2 {
+            font-size: 2rem;
+            color: var(--accent-orange);
+            margin-bottom: 5px;
+            font-weight: 900;
+        }
+
+        .footer-contact p {
+            color: var(--text-grey);
+            margin-bottom: 20px;
+        }
+
+        .contact-number {
+            display: inline-block;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--accent-yellow);
+            border: 2px solid var(--accent-yellow);
+            padding: 15px 40px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-number:hover {
+            background-color: var(--accent-yellow);
+            color: #000;
+            text-decoration: none;
+        }
+
         /* Responsive para móviles */
         @media (max-width: 768px) {
             .hero-content { flex-direction: column; align-items: flex-start; }
             .hero-desc { text-align: left; margin-top: 20px; }
             .services-grid { grid-template-columns: 1fr; }
             .projects-grid { grid-template-columns: 1fr; }
+            .contact-number { font-size: 1.5rem; padding: 15px 25px; }
         }
     </style>
 </head>
@@ -326,7 +366,7 @@
                 
                 <div class="project-item">
                     <a href="https://www.instagram.com/reel/C_63Ny8xqwj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
-                        <img src="assets/makingofbeatu.png"Making of Beauty">
+                        <img src="assets/makingofbeatu.png" alt="Making of Beauty">
                     </a>
                     <h3><a href="https://www.instagram.com/reel/C_63Ny8xqwj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">MAKING OF BEAUTY</a></h3>
                 </div>
@@ -441,6 +481,12 @@
             <p class="hint-text">Haz clic en el texto subrayado para reproducir el contenido</p>
         </div>
     </section>
+
+    <footer class="footer-contact">
+        <h2>Contacto</h2>
+        <p>¿Listo para trabajar juntos?</p>
+        <a href="https://wa.me/593996928687" target="_blank" class="contact-number">+593 99 692 8687</a>
+    </footer>
 
 </body>
 </html>
