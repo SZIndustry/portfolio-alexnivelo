@@ -1,1 +1,0 @@
-execute store result storage nmr:nautilus size int 1 run random value 45..99

@@ -1,1 +1,0 @@
-execute as @e[type=player] at @s if entity @e[type=marker,tag=nmr_celestial_watcher_spawn,distance=..16] run function nmr:celestial_watcher/structure/portal/pre_tp

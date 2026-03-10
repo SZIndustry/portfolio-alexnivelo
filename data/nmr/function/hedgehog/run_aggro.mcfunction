@@ -1,1 +1,0 @@
-execute as @e[type=polar_bear,limit=5,sort=random] at @s if entity @e[type=#nmr:hostile,tag=!nmr_penguin,distance=..16] if predicate nmr:percentages/20percent run function nmr:hedgehog/set_aggro

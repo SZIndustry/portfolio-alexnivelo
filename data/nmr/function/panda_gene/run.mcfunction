@@ -1,1 +1,0 @@
-execute as @e[type=panda,tag=!nmr.panda.name.set] run function nmr:panda_gene/get_data

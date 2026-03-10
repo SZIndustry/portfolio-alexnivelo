@@ -1,1 +1,0 @@
-execute as @e[type=wither,limit=1,sort=random] at @s run function nmr:tp_wither_down/tp_wither
