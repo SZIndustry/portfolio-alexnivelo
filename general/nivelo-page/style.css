@@ -1,0 +1,187 @@
+/* --- Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* --- Header (Sin fondo de imagen) --- */
+header {
+    background-color: #000; /* Fondo negro sólido para que no se vea la imagen */
+    padding: 40px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 35px;
+}
+
+.nav-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+/* --- Lógica del Fondo (Imagen de Chalina) --- */
+.content-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('assets/chalina.jpeg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Esto hace que la imagen se quede quieta mientras bajas */
+    min-height: 100vh;
+}
+
+/* --- Menú Desplegable --- */
+.dropdown {
+    position: relative;
+    padding-bottom: 20px; 
+    margin-bottom: -20px;
+}
+
+.dropdown-content {
+    display: block; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #0a0a0a;
+    min-width: 180px;
+    padding: 15px 0;
+    list-style: none;
+    z-index: 100;
+    border: 1px solid #1a1a1a;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content li a {
+    padding: 12px 25px;
+    display: block;
+    color: #888;
+}
+
+.dropdown-content li a:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+/* --- Secciones Transparentes (Para que se vea el fondo) --- */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: transparent; /* Importante */
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 6vw, 3.5rem);
+    max-width: 900px;
+    font-weight: 300;
+}
+
+main.container {
+    background: transparent;
+    padding: 60px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.text-item {
+    background-color: rgba(10, 10, 10, 0.8); /* Fondo semi-transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.text-item p { font-size: 1.3rem; color: #ccc; }
+.text-item span { color: #fff; border-bottom: 1px solid red; }
+
+.logo-item {
+    background-color: rgba(10, 10, 10, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 100px 0 50px 0;
+    background: transparent;
+}
+
+.instagram-section {
+    text-align: right;
+    margin-bottom: 80px;
+}
+
+.instagram-section .handle {
+    font-size: 2.2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.7rem;
+}
+
+.back-to-top { color: #fff; text-decoration: none; }
